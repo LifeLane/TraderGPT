@@ -1,28 +1,14 @@
 {
-  "name": "blocksmithai-tradergpt-bot",
-  "version": "1.0.0",
-  "main": "bot.py",
-  "scripts": {
-    "start": "python3 bot.py"
-  },
-  "dependencies": {
-    "python-telegram-bot": "^20.0"
-  },
-  "engines": {
-    "python": "3.11"
-  },
-  "vercel": {
-    "builds": [
-      {
-        "src": "bot.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/.*",
-        "dest": "/bot.py"
-      }
-    ]
-  }
+  "builds": [
+    {
+      "src": "bot.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/bot.py"
+    }
+  ]
 }
